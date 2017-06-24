@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="http://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Journal Feed Social Media Feed</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="overlay"></div>
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-default navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       <img src="images/logo.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/nb_1.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/nb_2.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/nb_3.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/nb_4.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/nb_5.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/nb_6.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/nb_7.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/nb_b1.png"></a>
+                </li>
+                <li>
+                    <img src="images/nb_b2.png">
+                </li>                                            
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+                <span class="hamb-middle"></span>
+                <span class="hamb-bottom"></span>
+            </button>
+            <div class="jumbotron">
+                <ul class="juicer-feed" data-feed-id="journalsquared">
+                    <h1 class="referral"></h1>
+                </ul>   
+            </div>                                          
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+</body>
+<script src="http://assets.juicer.io/embed.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+     isClosed = false;
+
+    trigger.click(function () {
+      hamburger_cross();      
+    });
+
+    function hamburger_cross() {
+
+      if (isClosed == true) {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+  }
+  
+  $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+  });  
+});
+</script>
+</html>
